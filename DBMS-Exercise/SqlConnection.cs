@@ -6,9 +6,9 @@ namespace DBMS_Exercise
 {
     public class SqlConnection : DbConnection
     {
-        public SqlConnection(string _connectionString) : base(_connectionString)
+        public SqlConnection(string connectionString) : base(connectionString)
         {
-            ConnectionString = _connectionString;
+            ConnectionString = connectionString;
         }
 
         public override void closeConnection()

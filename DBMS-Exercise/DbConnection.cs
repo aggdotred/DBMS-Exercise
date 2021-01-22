@@ -6,14 +6,14 @@ namespace DBMS_Exercise
     { 
         public string ConnectionString { get; set; }
         public TimeSpan Timeout { get; set; }
-        public DbConnection(string _connectionString)
+        public DbConnection(string connectionString)
         {
-            if ( _connectionString == "" || _connectionString == null)
+            if ( connectionString == "" || connectionString == null)
             {
                 throw new InvalidOperationException();
             } else
             {
-                ConnectionString = _connectionString;
+                ConnectionString = connectionString;
             }
         }
 

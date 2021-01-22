@@ -6,9 +6,9 @@ namespace DBMS_Exercise
 {
     public class OracleConnection : DbConnection
     {
-        public OracleConnection(string _connectionString) : base(_connectionString)
+        public OracleConnection(string connectionString) : base(connectionString)
         {
-            ConnectionString = _connectionString;
+            ConnectionString = connectionString;
         }
 
         public override void openConnection()

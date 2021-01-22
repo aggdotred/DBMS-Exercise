@@ -10,11 +10,11 @@ namespace DBMS_Exercise
             SqlConnection sqlConnection = new SqlConnection("sqlconnection");
             OracleConnection oracleConnection = new OracleConnection("oracleconnection");
 
-            oracleConnection.openConnection();
-            sqlConnection.openConnection();
+            DbCommand sqlCommand = new DbCommand(sqlConnection, "run sql");
+            DbCommand oracleCommand = new DbCommand(oracleConnection, "run oracle");
 
-            oracleConnection.closeConnection();
-            sqlConnection.closeConnection();
+            sqlCommand.Execute();
+            oracleCommand.Execute();
         }
     }
 }
