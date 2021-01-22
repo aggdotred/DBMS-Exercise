@@ -12,7 +12,7 @@ namespace DBMS_Exercise
         {
             if (dbConnection == null || instruction == "" || instruction == null)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("The Database Connection and Instruction cannot be null or empty.");
             }
             Connection = dbConnection;
             Instruction = instruction;
